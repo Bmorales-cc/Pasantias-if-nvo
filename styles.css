@@ -1,0 +1,359 @@
+
+@font-face {
+  font-family: 'CSHalsey-Regular'; /* Nombre que le das a la fuente */
+  src: url('fonts/CSHalsey-Regular.woff') format('woff'), /* Formato moderno */
+       url('fonts/CSHalsey-Regular.woff') format('woff'); /* Formato compatible */
+  font-weight: normal; /* Peso de la fuente (normal, bold, etc.) */
+  font-style: normal; /* Estilo de la fuente (normal, italic, etc.) */
+}
+
+:root {
+  --bg-color: #eeecec;
+  --text-color: #333;
+  --header-color: #0b011a; /* Color del header en modo claro */
+  --button-bg-color: #0b011a;
+  --button-text-color: white;
+  --button-hover-bg-color: #0b011a;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #121212;
+  --header-color: #121212; 
+  --button-bg-color: #dfdfdf;
+  --button-text-color: #dadada;
+  --button-hover-bg-color: #dfdfdf;
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilos para el header */
+header {
+  font-family: 'CSHalsey-Regular', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--header-color);
+  color: rgba(255, 255, 255, 0.945);
+  padding: 1rem 0;
+  position: relative;
+  height: 60px; /* Ajusta la altura según sea necesario */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 0 10px;
+}
+
+.button {
+  font-family: 'CSHalsey-Regular';
+  text-decoration: none;
+  padding: 10px 20px;
+  background: var(--button-bg-color);
+  color: var(--button-text-color);
+  border-radius: 5px;
+  transition: transform 0.2s, background-color 0.3s;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  transform: scale(1.1);
+  background-color: var();
+}
+
+@keyframes gradientText {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes movingBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+h1 {
+  font-family: 'CSHalsey-Regular', sans-serif;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  font-size: 3rem;
+  background: linear-gradient(45deg, #c0d3e7, #c0d3e7, #28277c, #28277c);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientText 5s ease infinite;
+  position: relative;
+  display: inline-block;
+}
+h2 {
+  font-family: 'CSHalsey-Regular';
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.back-button {
+  font-family: 'CSHalsey-Regular';
+  position: absolute;
+  top: 30px; /* Ajusta este valor para mover el botón más abajo */
+  left: 10px;
+  padding: 10px 20px;
+  background: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+.chapter-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.navigation-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+/* Estilos generales para los párrafos */
+.chapter-content p {
+  font-family: 'Open Sans', sans-serif; /* Fuente personalizada */
+  background-color: var(--paragraph-bg-color); /* Color de fondo */
+  padding: 10px 15px; /* Espacio interno: 10px arriba/abajo, 15px izquierda/derecha */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin: 8px 0; /* Espacio entre párrafos: 8px arriba/abajo, 0 a los lados */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transición suave */
+  border: 5px solid var(--paragraph-border-color); /* Borde del párrafo */
+  line-height: 1.4; /* Altura de línea equilibrada */
+  font-size: 0.95rem; /* Tamaño de fuente ligeramente más grande */
+  text-align: center; /* Alinear texto a la izquierda */
+  text-indent: 0; /* Sin sangría en la primera línea */
+  word-spacing: normal; /* Espaciado entre palabras normal */
+  letter-spacing: normal; /* Espaciado entre letras normal */
+}
+
+/* Efecto hover para los párrafos en modo claro */
+.chapter-content p:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto hover para los párrafos en modo oscuro */
+[data-theme="dark"] .chapter-content p:hover {
+  box-shadow: 0 8px 16px rgba(252, 252, 252, 0.4); /* Morado claro */
+}
+
+/* Colores para los párrafos en modo claro y oscuro */
+:root {
+  --paragraph-bg-color: #ffffff;
+  --paragraph-border-color: #e0e0e0;
+}
+
+
+/* Efecto hover para los párrafos en modo oscuro */
+[data-theme="dark"] .chapter-content p:hover {
+  box-shadow: 0 8px 16px rgba(244, 244, 245, 0.4); /* Morado claro */
+}
+
+/* Colores para los párrafos en modo claro y oscuro */
+:root {
+  --paragraph-bg-color: #ffffff;
+  --paragraph-border-color: #e0e0e0;
+}
+
+[data-theme="dark"] {
+  --paragraph-bg-color: #1e1e1e;
+  --paragraph-border-color: #333333;
+}
+
+.gif-button {
+  font-family: 'CSHalsey-Regular';
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.gif-button:hover {
+  background-color: var(--button-hover-bg-color);
+  transform: scale(1.05);
+}
+
+.gif-section {
+  font-family: 'CSHalsey-Regular';
+  display: none; /* Oculto por defecto */
+  margin-top: 20px;
+  padding: 20px;
+  background-color: var(--paragraph-bg-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.gif-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.gif {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.gif:hover {
+  transform: scale(1.05);
+}
+
+/* Fondo solo en la página de inicio */
+body.home .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('gifs/fondo.jpg') no-repeat center center/cover;
+  z-index: -1;
+  animation: zoomIn 3s ease-in-out infinite alternate;
+}
+
+/* Asegura que el contenido sea desplazable */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+/* Efecto de zoom suave */
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* Estilos para el header */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--header-color);
+  color: white;
+  padding: 1rem 0;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+/* Estilos para los botones */
+.button {
+  text-decoration: none;
+  padding: 10px 20px;
+  background: var(--button-bg-color);
+  color: var(--button-text-color);
+  border-radius: 5px;
+  transition: transform 0.2s, background-color 0.3s;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.button:hover {
+  transform: scale(1.1);
+  background-color: var(--button-hover-bg-color);
+}
+
+/* Variables para el tema claro y oscuro */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --header-color: rgba(98, 0, 234, 0.8);
+  --button-bg-color: rgba(98, 0, 234, 0.8);
+  --button-text-color: #ffffff;
+  --button-hover-bg-color: rgba(55, 0, 179, 0.9);
+}
+
+[data-theme="dark"] {
+  --bg-color: #000000;
+  --text-color: #e0e0e0;
+  --header-color: rgba(187, 134, 252, 0.8);
+  --button-bg-color: rgba(187, 134, 252, 0.8);
+  --button-text-color: #000000;
+  --button-hover-bg-color: rgba(154, 103, 234, 0.9);
+}
+/* Estilos para el botón de cambio de tema */
+#themeToggle {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease; /* Transición suave */
+  position: absolute; /* Posicionamiento absoluto */
+  top: 50%; /* Centra verticalmente */
+  right: 10px; /* Alinea a la derecha con un pequeño margen */
+  transform: translateY(-50%); /* Ajusta la posición vertical */
+  transform-origin: center; /* Define el punto de origen de la transformación */
+}
+
+#themeToggle:hover {
+  transform: translateY(-50%) scale(1.1); /* Escala el botón sin moverlo */
+}
+@media (max-width: 768px) {
+  #themeToggle {
+    font-size: 1.2rem; /* Tamaño de fuente más pequeño en móviles */
+  }
+}

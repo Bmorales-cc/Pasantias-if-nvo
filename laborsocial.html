@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Labor Social</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <button onclick="window.location.href='index.html'" class="back-button">Volver al Inicio</button>
+    <h1 style="text-align: center; margin-bottom: 0;">Labor Social</h1>
+    <button id="themeToggle">🌙</button>
+  </header>
+
+  <main>
+    <div class="chapter-content">
+      <h2 style="text-align: center;">Informe de labor social</h2>
+      <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+        Durante mi etapa en el liceo, llevé a cabo mi labor social los días <b>lunes y viernes</b>, en un horario aproximado de <b>7:00 a.m. a 11:00 a.m..</b> Sin embargo, este horario era relativo, ya que la duración de la jornada variaba en función de las actividades realizadas, lo que en ocasiones nos permitía retirarnos más temprano o, por el contrario, extender nuestra permanencia según las necesidades del día.
+
+Las actividades desempeñadas en el marco de la labor social estuvieron enfocadas en brindar apoyo a las docentes de educación preescolar, facilitando el traslado ordenado de los niños de un lugar a otro dentro de las instalaciones. Adicionalmente, colaboré en diversas tareas logísticas, algunas de esas actividades fueron:
+
+<b>Apoyo en el traslado de equipos:</b> En varias ocasiones, se requería mover la corneta hasta el patio para su uso en actividades escolares.
+<b>Asistencia en la decoración de espacios:</b> Brindé apoyo a los representantes en la instalación de decoraciones para eventos y actividades especiales realizadas en el patio.
+<b>Elaboración de carteleras informativas:</b> Participé en la creación y montaje de carteleras utilizando papel bond y otros materiales, con el fin de contribuir a la ambientación del entorno escolar y la difusión de información relevante.
+Todas estas actividades permitieron fortalecer el trabajo en equipo y fomentar el sentido de colaboración dentro de la comunidad educativa, impactando de manera positiva en el desarrollo de las dinámicas escolares diarias.
+        
+        
+        Además de la labor social realizada en el liceo, también participé en una labor comunitaria vinculada a la organización de un <b>partido de fútbol infantil,</b> en colaboración con los fundadores del <b>club de fútbol local.</b> Esta actividad se llevó a cabo en el campo deportivo de <b>Nueva Casarapa,</b> donde se enfrentaron los equipos de <b>Fe y Alegría y Club de los Muchachos.</b>
+
+Para garantizar el adecuado desarrollo del evento, seguimos un protocolo de organización que nos permitió llevar a cabo el partido de manera estructurada, brindando a los niños una experiencia deportiva enriquecedora y lo más cercana posible a un encuentro profesional.
+
+Nuestra participación en esta iniciativa incluyó la gestión y planificación de la actividad, contando con el respaldo de nuestros representantes, quienes nos apoyaron en la organización de la premiación. Al finalizar el partido, se realizó la entrega de medallas y trofeos a los niños como reconocimiento por su esfuerzo y participación.
+
+Posteriormente, llevamos a cabo un compartir entre los jugadores y los organizadores, lo que permitió fortalecer los lazos entre la comunidad educativa y deportiva, promoviendo valores como el compañerismo, la disciplina y el trabajo en equipo.
+    </p>
+    <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+      En la sección de <b>"Ver Presentaciones"</b>, se encuentran adjuntas algunas fotografías que reflejan los momentos más significativos de esta actividad, evidenciando el impacto positivo generado en los niños y en la comunidad.
+    </p>
+         <!-- Botón para mostrar/ocultar GIFs -->
+  <button id="toggleGifs" class="gif-button">Ver Presentaciones</button>
+
+  <!-- Sección de GIFs (oculta inicialmente) -->
+  <div id="gifSection" class="gif-section">
+    <h3>Presentaciones</h3>
+    <div class="gif-container">
+      <img src="gifs/labor1.gif" alt="presentacion 7" class="gif">
+      <img src="gifs/labor2.gif" alt="presentación 8" class="gif">
+    </div>
+  </div>
+
+  <!-- Botón para descargar el archivo de Word -->
+  <button id="downloadWordFile" class="button">Archivo de Word</button>
+
+  <!-- Enlace oculto para la descarga -->
+  <a id="hiddenDownloadLink" href="gifs/Informe-labor.docx" download style="display: none;"></a>
+</div>
+      <div class="navigation-buttons">
+        <a href="capitulo4.html" class="button">Anterior Capítulo</a>
+      </div>
+  </main>
+
+  <script>
+    // Script para manejar la descarga del archivo de Word
+    document.getElementById('downloadWordFile').addEventListener('click', function() {
+      const hiddenDownloadLink = document.getElementById('hiddenDownloadLink');
+      hiddenDownloadLink.click(); // Simula un clic en el enlace oculto
+    });
+  </script>
+</body>
+</html>
