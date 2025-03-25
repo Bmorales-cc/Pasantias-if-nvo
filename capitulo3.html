@@ -38,10 +38,7 @@
     </div>
   </div>
   
-    <!-- Botón para descargar el archivo de Word -->
-    <button id="downloadWordFile" class="button">Archivo de Excel</button>
-  
-  <!-- Enlace oculto para la descarga -->
+  <button id="downloadWordFile" class="button">Archivo de Excel</button>
   <a id="hiddenDownloadLink" href="documentos/Control de Requisicion Toners.xlsx" download style="display: none;"></a>
 </div>
       <div class="navigation-buttons">
@@ -50,5 +47,11 @@
       </div>
     </div>
   </main>
+  <script>
+    document.getElementById('downloadWordFile').addEventListener('click', function() {
+      // Simula un click en el enlace oculto
+      document.getElementById('hiddenDownloadLink').click();
+    });
+  </script>
 </body>
 </html>
