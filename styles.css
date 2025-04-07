@@ -351,7 +351,7 @@ header {
 #themeToggle:hover {
   transform: translateY(-50%) scale(1.1); /* Escala el botón sin moverlo */
 }
-@media (max-width: 686px) {
+@media (max-width: 501px) {
   #themeToggle {
     font-size: 1.2rem; /* Tamaño de fuente más pequeño en móviles */
   }
