@@ -248,7 +248,7 @@ h2 {
   transition: transform 0.3s;
 }
 .gif:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 /* Fondo solo en la página de inicio */
@@ -260,7 +260,7 @@ body.home .background {
   height: 100%;
   background: url('documentos/fondo.jpg') no-repeat center center/cover;
   z-index: -1;
-  animation: zoomIn 3s ease-in-out infinite alternate;
+  animation: pulse 3s ease-in-out infinite;
 }
 
 /* Asegura que el contenido sea desplazable */
@@ -271,14 +271,19 @@ body {
   overflow-y: auto;
 }
 
-/* Efecto de zoom suave */
-@keyframes zoomIn {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.1);
-  }
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.9; }
+  100% { transform: scale(1.05); opacity: 1; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
+
+@keyframes wave {
+  0% { transform: translateX(0) rotate(0deg); }
+  100% { transform: translateX(10px) rotate(1deg); }
 }
 
 /* Estilos para el header */
