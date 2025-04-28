@@ -426,7 +426,7 @@ header {
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 25px rgb(0, 0, 0);
   transition: all 0.4s ease;
 }
 
@@ -437,7 +437,7 @@ header {
 }
 
 .gif-carousel-item:hover img {
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 40px rgb(0, 0, 0);
   border-radius: 15px;
 }
 
