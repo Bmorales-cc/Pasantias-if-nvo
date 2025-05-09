@@ -379,7 +379,7 @@ header {
     font-size: 1.2rem; /* Tamaño de fuente más pequeño en móviles */
   }
 }
-/* Carrusel con efecto de bucle infinito */
+
 .gif-carousel-container {
   margin: -20px auto 0;
   padding: 30px 0;
@@ -410,7 +410,7 @@ header {
   height: 100%;
   align-items: center;
   gap: 20px;
-  animation: infinite-scroll 10s linear infinite;
+  animation: infinite-scroll 20s linear infinite;
 }
 
 .gif-carousel-item {
